@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Support | Echoveil</title>
+  <meta name="description" content="How to get help with Echoveil's Unity Editor tools and how to report a problem.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site">
+    <div class="wrap">
+      <a class="brand" href="index.html">Echo<span>veil</span></a>
+      <nav aria-label="Main">
+        <ul>
+          <li><a href="index.html#tools">Tools</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="support.html" aria-current="page">Support</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h1>Support</h1>
+    <p class="lede">Questions, bug reports and feature requests are welcome.</p>
+
+    <h2>Contact</h2>
+    <p>Email <a href="mailto:support@example.com"><span class="todo">support@example.com</span></a>.</p>
+
+    <h2>Reporting a problem</h2>
+    <p>These details make a problem much quicker to track down:</p>
+    <ol>
+      <li><strong>Your Unity version</strong>, e.g. <code>6000.2.8f1</code> (<em>Help &gt; About Unity</em>).</li>
+      <li><strong>The Editor Plus version</strong> (shown in Package Manager).</li>
+      <li><strong>Your operating system.</strong></li>
+      <li><strong>What you did, what you expected, and what happened.</strong></li>
+      <li><strong>Any red or yellow messages in the Console</strong>, copied as text.</li>
+      <li>If a bar, tab strip or panel is missing or in the wrong place: run
+          <code>Tools &gt; Editor Plus &gt; Debug &gt; Dump Window Trees</code> and include what it writes to the Console.</li>
+    </ol>
+
+    <h2>Common questions</h2>
+
+    <h3>The tab strip overlaps a Unity button</h3>
+    <p>The strip sits in the empty part of the Project window's toolbar. In a very narrow window it can run into the
+       search field. Widen the window.</p>
+
+    <h3>A tab or favorite selects a folder but doesn't open it in the tree</h3>
+    <p>Opening a folder in the tree uses a method inside Unity that can change between versions. If Unity changes it,
+       a warning appears once in the Console and the item is selected instead. Please report it with your Unity version.</p>
+
+    <h3>My colors, tabs and favorites are gone</h3>
+    <p>They are stored in <code>ProjectSettings/EditorPlus.asset</code> inside your project. Check that the file is still there
+       and that it was committed if you share the project.</p>
+
+    <h3>Uninstalling</h3>
+    <p>Remove the package in Package Manager. You can then delete <code>ProjectSettings/EditorPlus.asset</code>.</p>
+
+    <p>More detail is in the <a href="docs/editor-plus.html">user guide</a>.</p>
+  </main>
+
+  <footer class="site">
+    <div class="wrap">
+      <p>&copy; 2026 Echoveil</p>
+      <p>Unity is a trademark of Unity Technologies. Echoveil is not affiliated with or endorsed by Unity Technologies.</p>
+    </div>
+  </footer>
+</body>
+</html>

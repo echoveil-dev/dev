@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Editor Plus | Echoveil</title>
+  <meta name="description" content="Editor Plus for the Unity Editor: colors and icons for Hierarchy rows and Project folders, folder tabs, favorites, selection history, zebra rows and tree lines.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site">
+    <div class="wrap">
+      <a class="brand" href="index.html">Echo<span>veil</span></a>
+      <nav aria-label="Main">
+        <ul>
+          <li><a href="index.html#tools" aria-current="page">Tools</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="support.html">Support</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h1>Editor Plus <span class="badge">Beta</span></h1>
+    <p class="lede">Colors, icons, tabs, favorites and navigation for the Unity Editor's Hierarchy and Project windows, in one package.</p>
+
+    <div class="note">
+      <strong>Beta, version 0.8.5.</strong> Developed and tested on Unity 6000.2. It also compiles cleanly
+      on 6000.4 and 6000.6, but has not been run through a full test there yet.
+      Editor-only: nothing from the package is included in your builds.
+    </div>
+
+    <h2>What it does</h2>
+
+    <h3>Colors and icons</h3>
+    <p>Alt+click a Hierarchy row or a Project folder (or right-click, then <em>Editor Plus &gt; Color and Icon...</em>)
+       to open a palette. Pick a color, a built-in icon, or search the icons of Unity's own component and asset types.
+       A color tints the row or folder; an icon replaces the object's icon, or sits as a badge on a folder.</p>
+
+    <h3>Folder tabs</h3>
+    <p>Middle-click a folder to open it as a tab in the Project window's toolbar. Tabs can hold folders, assets and
+       scene objects, and show their color and icon. Click a tab to jump to it.</p>
+
+    <h3>Favorites with pages</h3>
+    <p>Hold Alt over the Project window, or start a drag with Alt held, and a favorites panel opens over the folder tree.
+       Drop folders, assets or GameObjects on it. Favorites live on named pages you can add, rename and switch between.</p>
+
+    <h3>Selection history and bookmarks</h3>
+    <p>A bar above the Inspector gives you back and forward through what you have selected, a history menu, and
+       bookmarks you can pin for quick access.</p>
+
+    <h3>Zebra rows and tree lines</h3>
+    <p>Alternating row stripes and parent-to-child lines in the Hierarchy and the Project folder tree. Both can be switched off.</p>
+
+    <h2>Screenshots</h2>
+    <!-- TODO: add screenshots or short GIFs here, e.g. <img src="images/palette.png" alt="The color and icon palette"> -->
+    <p>Screenshots will be added here.</p>
+
+    <h2>Requirements and limitations</h2>
+    <ul>
+      <li>Unity 6 (6000.2 or newer).</li>
+      <li>Windows is the main platform. macOS and Linux have not been tested.</li>
+      <li>The Project window features (tabs, favorites, folder navigation) work by reaching into the layout of
+          Unity's built-in windows. A Unity update can change that layout, so those features may need an update
+          after a new Unity release.</li>
+      <li>Objects in an unsaved scene can't be decorated; save the scene first.</li>
+    </ul>
+
+    <h2>Install</h2>
+    <ol>
+      <li>Open <em>Window &gt; Package Manager</em>.</li>
+      <li>Click <strong>+</strong> and choose <em>Add package from git URL</em> (or <em>Add package from tarball</em>).</li>
+      <li>Enter <code><span class="todo">https://github.com/your-username/your-repo.git</span></code> (replace once the package repository exists).</li>
+    </ol>
+    <p>Full instructions, every gesture and the settings are in the <a href="docs/editor-plus.html">user guide</a>.</p>
+
+    <h2>Support</h2>
+    <p>Found a bug or have a request? See <a href="support.html">Support</a>.</p>
+  </main>
+
+  <footer class="site">
+    <div class="wrap">
+      <p>&copy; 2026 Echoveil</p>
+      <p>Unity is a trademark of Unity Technologies. Echoveil is not affiliated with or endorsed by Unity Technologies.</p>
+    </div>
+  </footer>
+</body>
+</html>

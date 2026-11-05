@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Editor Plus user guide | Echoveil</title>
+  <meta name="description" content="User guide for Editor Plus, a Unity Editor package: colors and icons, folder tabs, favorites, selection history, zebra rows and tree lines.">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header class="site">
+    <div class="wrap">
+      <a class="brand" href="../index.html">Echo<span>veil</span></a>
+      <nav aria-label="Main">
+        <ul>
+          <li><a href="../index.html#tools" aria-current="page">Tools</a></li>
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../support.html">Support</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <p><a href="../editor-plus.html">&larr; Editor Plus</a></p>
+    <h1>Editor Plus: user guide</h1>
+    <p class="lede">Quality-of-life additions for the Unity Editor. Editor-only: nothing from this package ends up in your builds.</p>
+
+    <h2 id="requirements">Requirements</h2>
+    <ul>
+      <li>Unity 6 (6000.2 or newer). Developed and verified on 6000.2.8f1.</li>
+      <li>Windows is the primary platform. macOS and Linux are untested.</li>
+    </ul>
+
+    <h2 id="installing">Installing</h2>
+    <p>Package Manager &gt; <strong>+</strong> &gt; <em>Add package from git URL</em>, <em>Add package from tarball</em>, or
+       <em>Add package from disk</em> (pick <code>package.json</code>). You can also copy the package folder into your project's
+       <code>Packages/</code> folder.</p>
+
+    <h2 id="features">Features</h2>
+
+    <h3 id="colors-icons">Colors and icons (Hierarchy and Project window)</h3>
+    <ul>
+      <li><strong>Alt+click</strong> a Hierarchy row or a folder in the Project window (a quick click, no drag), or right-click it
+          &gt; <strong>Editor Plus &gt; Color and Icon...</strong></li>
+      <li>Pick a color, a built-in icon, or any component/asset type icon (use the search box in the palette).</li>
+      <li>In the Hierarchy a color tints the row and an icon replaces the object's icon.</li>
+      <li>On a folder a color tints the folder and an icon is drawn as a badge in its bottom-right corner.
+          <em>Minimal folder icons</em> (gear menu or Preferences) draws the icon in place of the folder instead.</li>
+      <li>Use <strong>No color</strong> / <strong>No icon</strong> in the palette to go back to the default.</li>
+    </ul>
+    <p>Objects in an unsaved scene can't be decorated; save the scene first.</p>
+
+    <h3 id="tabs">Tabs (Project window toolbar)</h3>
+    <p>Tabs sit in the Project window's toolbar, between the create "+" menu and the search field.</p>
+    <ul>
+      <li><strong>Middle-click a folder</strong> to open it as a tab.</li>
+      <li>The strip's <strong>+</strong> button adds the selected item, or the folder being shown if nothing is selected.</li>
+      <li>You can also drop folders, assets or GameObjects on the strip, or right-click an item
+          &gt; <strong>Editor Plus &gt; Open in New Tab</strong>.</li>
+      <li>Click a tab to select it (folders navigate the folder tree). Middle-click or the <strong>x</strong> closes it.
+          Right-click a tab for <em>Close other tabs</em> / <em>Close all tabs</em>.</li>
+      <li>Tabs show the item's color and icon.</li>
+    </ul>
+
+    <h3 id="favorites">Favorites (Project window)</h3>
+    <ul>
+      <li><strong>Hold Alt</strong> for a moment over the Project window, or <strong>start a drag with Alt held</strong>:
+          a favorites panel covers the folder tree.</li>
+      <li>Drop folders, assets or GameObjects on it to add them. Click an item to open it (folders are navigated in the tree).
+          Right-click an item or click <strong>x</strong> to remove it.</li>
+      <li>The pager at the bottom (<code>&lt; Page 1 &gt;</code>) switches pages. Click the page name to rename it,
+          <strong>+</strong> adds a page, right-click the name to delete a page.</li>
+      <li>You can also right-click an asset &gt; <strong>Editor Plus &gt; Add to Favorites</strong>.</li>
+    </ul>
+    <p>A quick Alt+click opens the color/icon palette instead; the panel only appears when Alt is held or a drag is under way.</p>
+
+    <h3 id="inspector-bar">Inspector bar</h3>
+    <ul>
+      <li><strong>Back / forward</strong> through your selection history, and a <strong>History</strong> menu of recent selections.</li>
+      <li>The <strong>star</strong> bookmarks the current selection. Bookmarks appear as chips in the bar; right-click a chip to remove it.</li>
+    </ul>
+
+    <h3 id="zebra-lines">Zebra rows and tree lines</h3>
+    <p>Alternating row stripes and parent-to-child lines in the Hierarchy and in the Project folder tree.</p>
+
+    <h2 id="settings">Settings</h2>
+    <p>Use the <strong>gear</strong> button in the tab strip, <strong>Edit &gt; Preferences &gt; Editor Plus</strong>, or
+       <strong>Tools &gt; Editor Plus</strong>:</p>
+    <table>
+      <thead><tr><th>Setting</th><th>Default</th></tr></thead>
+      <tbody>
+        <tr><td>Zebra rows</td><td>on</td></tr>
+        <tr><td>Parent-to-child lines</td><td>on</td></tr>
+        <tr><td>Minimal folder icons (icon replaces the folder instead of a badge)</td><td>off</td></tr>
+      </tbody>
+    </table>
+    <p>These are saved per user.</p>
+
+    <h2 id="data">Where your data is saved</h2>
+    <p>Colors, icons, bookmarks, tabs and favorites are stored in <code>ProjectSettings/EditorPlus.asset</code>. Commit that file to
+       share them with your team; delete it to reset everything. Selection history is kept for the editor session only.</p>
+
+    <h2 id="troubleshooting">Troubleshooting</h2>
+    <ul>
+      <li><strong>The tab strip overlaps Unity's buttons.</strong> The strip is placed over the empty part of the Project toolbar.
+          In an unusually narrow window it can collide with the search field; widen the window.</li>
+      <li><strong>A bar or the favorites panel doesn't appear.</strong> It depends on Unity's internal window layout, which can change
+          between Unity versions. Run <em>Tools &gt; Editor Plus &gt; Debug &gt; Dump Window Trees</em> and include the console output
+          when reporting the problem.</li>
+      <li><strong>Folders open in the wrong place from a tab or favorite.</strong> This uses an internal Unity method; if Unity changes it,
+          a warning is logged once and the item is selected instead.</li>
+    </ul>
+    <p>To report a problem, see <a href="../support.html">Support</a>.</p>
+
+    <h2 id="uninstalling">Uninstalling</h2>
+    <p>Remove the package in Package Manager. You can then delete <code>ProjectSettings/EditorPlus.asset</code>.</p>
+  </main>
+
+  <footer class="site">
+    <div class="wrap">
+      <p>&copy; 2026 Echoveil</p>
+      <p>Unity is a trademark of Unity Technologies. Echoveil is not affiliated with or endorsed by Unity Technologies.</p>
+    </div>
+  </footer>
+</body>
+</html>
